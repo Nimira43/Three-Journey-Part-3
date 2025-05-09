@@ -17,6 +17,11 @@ const doorRoughnessTexture = textureLoader.load('./textures/door/roughness.jpg')
 const matcapTexture = textureLoader.load('./textures/matcaps/1.png')
 const gradientTexture = textureLoader.load('./textures/gradients/3.jpg')
 
+doorColourTexture.colorSpace = THREE.SRGBColorSpace
+matcapTexture.colorSpace = THREE.SRGBColorSpace
+
+
+
 const material = new THREE.MeshBasicMaterial()
 
 const sphere = new THREE.Mesh(
