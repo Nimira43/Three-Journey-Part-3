@@ -5,6 +5,15 @@ import './main.css'
 const canvas = document.querySelector('.canvas')
 const scene = new THREE.Scene()
 
+const material = new THREE.MeshBasicMaterial()
+const sphere = new THREE.Mesh(
+  new THREE.SphereGeometry(0.5, 16, 16),
+  material
+)
+
+
+
+
 const sizes = {
   width: window.innerWidth,
   height: window.innerHeight
@@ -38,11 +47,6 @@ const renderer = new THREE.WebGLRenderer({
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-
-const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2)
-const material = new THREE.MeshBasicMaterial({ color: '#ff4500' })
-const mesh = new THREE.Mesh(geometry, material)
-scene.add(mesh)
 
 const clock = new THREE.Clock()
 const tick = () => {
