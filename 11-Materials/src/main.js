@@ -65,6 +65,14 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 const clock = new THREE.Clock()
 const tick = () => {
   const elapsedTime = clock.getElapsedTime()
+
+  sphere.rotation.y = 0.1 * elapsedTime
+  plane.rotation.y = 0.1 * elapsedTime
+  torus.rotation.y = 0.1 * elapsedTime
+  sphere.rotation.x = -0.15 * elapsedTime
+  plane.rotation.x = -0.15 * elapsedTime
+  torus.rotation.x = -0.15 * elapsedTime
+
   controls.update()
   renderer.render(scene, camera)
   window.requestAnimationFrame(tick)
