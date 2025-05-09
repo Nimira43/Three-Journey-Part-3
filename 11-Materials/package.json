@@ -1,0 +1,25 @@
+{
+  "name": "three-js-template",
+  "version": "1.0.0",
+  "description": "Starter template for Three JS projects",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [
+    "Three",
+    "JavaScript"
+  ],
+  "author": "Nick Rabone",
+  "license": "MIT",
+  "dependencies": {
+    "gsap": "^3.12.7",
+    "three": "^0.172.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.7",
+    "vite-plugin-restart": "^0.4.2"
+  }
+}
