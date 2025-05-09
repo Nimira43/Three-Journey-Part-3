@@ -5,6 +5,16 @@ import './main.css'
 const canvas = document.querySelector('.canvas')
 const scene = new THREE.Scene()
 
+const textureLoader = new THREE.TextureLoader()
+
+const doorColourTexture = textureLoader.load('./textures/door/color.jpg')
+const doorAlphaTexture = textureLoader.load('./textures/door/alpha.jpg')
+const doorAmbientOcclusionTexture = textureLoader.load('./textures/ambientOcclusion/color.jpg')
+const doorHeightTexture = textureLoader.load('./textures/door/height.jpg')
+const doorNormalTexture = textureLoader.load('./textures/door/normal.jpg')
+const doorMetalnessTexture = textureLoader.load('./textures/door/metalness.jpg')
+const doorRoughnessTexture = textureLoader.load('./textures/door/roughness.jpg')
+
 const material = new THREE.MeshBasicMaterial()
 
 const sphere = new THREE.Mesh(
