@@ -11,18 +11,21 @@ const sphere = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
   material
 )
+sphere.position.x = -1.5
 
 const plane = new THREE.Mesh(
   new THREE.PlaneGeometry(1, 1),
   material
 )
+plane.position.x = 0
 
 const torus = new THREE.Mesh(
   new THREE.TorusGeometry(0.3, 0.2, 16, 32),
   material
 )
+torus.position.x = 1.5
 
-
+scene.add(sphere, plane, torus)
 
 
 const sizes = {
