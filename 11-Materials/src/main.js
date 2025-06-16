@@ -30,6 +30,7 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace
 // material.side = THREE.DoubleSide
 
 const material = new THREE.MeshNormalMaterial()
+material.flatShading = true
 
 
 
