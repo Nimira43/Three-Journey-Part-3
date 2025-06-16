@@ -33,7 +33,7 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace
 // material.flatShading = true
 
 const material = new THREE.MeshMatcapMaterial()
-
+material.matcap = matcapTexture
 
 
 
