@@ -29,8 +29,10 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace
 // material.alphaMap = doorAlphaTexture
 // material.side = THREE.DoubleSide
 
-const material = new THREE.MeshNormalMaterial()
-material.flatShading = true
+// const material = new THREE.MeshNormalMaterial()
+// material.flatShading = true
+
+const material = new THREE.MeshMatcapMaterial()
 
 
 
