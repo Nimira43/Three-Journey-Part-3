@@ -20,11 +20,8 @@ const gradientTexture = textureLoader.load('./textures/gradients/3.jpg')
 doorColourTexture.colorSpace = THREE.SRGBColorSpace
 matcapTexture.colorSpace = THREE.SRGBColorSpace
 
-
-
-const material = new THREE.MeshBasicMaterial({
-  map: doorColourTexture
-})
+const material = new THREE.MeshBasicMaterial()
+material.map = doorColourTexture
 
 const sphere = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
