@@ -40,7 +40,7 @@ material.metalnessMap = doorMetalnessTexture
 material.roughnessMap = doorRoughnessTexture
 material.normalMap = doorNormalTexture
 
-gui.add(material, 'metalness').min(0).max(5).step(0.0001)
+gui.add(material, 'metalness').min(0).max(4).step(0.0001)
 gui.add(material, 'roughness').min(0).max(5).step(0.0001)
 gui.add(material, 'aoMapIntensity').min(0).max(10).step(0.1)
 gui.add(material, 'displacementScale').min(0).max(5).step(0.1)
