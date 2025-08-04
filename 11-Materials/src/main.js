@@ -19,7 +19,8 @@ const gradientTexture = textureLoader.load('./textures/gradients/3.jpg')
 doorColourTexture.colorSpace = THREE.SRGBColorSpace
 matcapTexture.colorSpace = THREE.SRGBColorSpace
 
-const material = new THREE.MeshDepthMaterial()
+// const material = new THREE.MeshDepthMaterial()
+const material = new THREE.MeshLambertMaterial()
 
 const sphere = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
