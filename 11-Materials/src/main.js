@@ -55,13 +55,13 @@ const torus = new THREE.Mesh(
 torus.position.x = 1.5
 scene.add(sphere, plane, torus)
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 1);
-scene.add(ambientLight)
-const pointLight = new THREE.PointLight(0xffffff, 30);
-pointLight.position.x = 2
-pointLight.position.y = 3
-pointLight.position.z = 4
-scene.add(pointLight)
+// const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+// scene.add(ambientLight)
+// const pointLight = new THREE.PointLight(0xffffff, 30);
+// pointLight.position.x = 2
+// pointLight.position.y = 3
+// pointLight.position.z = 4
+// scene.add(pointLight)
 
 const rgbeLoader = new RGBELoader()
 rgbeLoader.load('./textures/environmentMap/2k.hdr', (environmentMap) => {
