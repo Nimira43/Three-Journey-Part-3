@@ -5,7 +5,6 @@ import GUI from 'lil-gui'
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js'
 
 const gui = new GUI()
-
 const canvas = document.querySelector('.canvas')
 const scene = new THREE.Scene()
 
@@ -63,6 +62,8 @@ pointLight.position.x = 2
 pointLight.position.y = 3
 pointLight.position.z = 4
 scene.add(pointLight)
+
+const rgbeLoader = new RGBELoader()
 
 const sizes = {
   width: window.innerWidth,
