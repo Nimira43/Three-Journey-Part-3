@@ -24,6 +24,7 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace
 
 const material = new THREE.MeshPhongMaterial()
 material.shininess = 100
+material.specular = new THREE.Color(0xff0000)
 
 
 const sphere = new THREE.Mesh(
@@ -46,7 +47,7 @@ torus.position.x = 1.5
 
 scene.add(sphere, plane, torus)
 
-const ambientLight = new THREE.AmbientLight(0x00bfff, 1);
+const ambientLight = new THREE.AmbientLight(0x8a2be2, 1);
 scene.add(ambientLight)
 const pointLight = new THREE.PointLight(0x8a2be2, 30);
 pointLight.position.x = 2
