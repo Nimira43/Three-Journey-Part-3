@@ -4,7 +4,6 @@ import './main.css'
 
 const canvas = document.querySelector('.canvas')
 const scene = new THREE.Scene()
-
 const textureLoader = new THREE.TextureLoader()
 
 const doorColourTexture = textureLoader.load('./textures/door/color.jpg')
@@ -20,23 +19,7 @@ const gradientTexture = textureLoader.load('./textures/gradients/3.jpg')
 doorColourTexture.colorSpace = THREE.SRGBColorSpace
 matcapTexture.colorSpace = THREE.SRGBColorSpace
 
-// const material = new THREE.MeshBasicMaterial()
-// material.map = doorColourTexture
-// material.color = new THREE.Color('#ff4500')
-// material.wireframe = true 
-// material.transparent = true
-// material.opacity = 0.5
-// material.alphaMap = doorAlphaTexture
-// material.side = THREE.DoubleSide
-
-// const material = new THREE.MeshNormalMaterial()
-// material.flatShading = true
-
-const material = new THREE.MeshMatcapMaterial()
-material.matcap = matcapTexture
-material.side = THREE.DoubleSide
-
-
+const material = new THREE.MeshDepthMaterial()
 
 const sphere = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
@@ -57,7 +40,6 @@ const torus = new THREE.Mesh(
 torus.position.x = 1.5
 
 scene.add(sphere, plane, torus)
-
 
 const sizes = {
   width: window.innerWidth,
