@@ -35,10 +35,12 @@ material.map = doorColourTexture
 material.aoMap = doorAmbientOcclusionTexture
 material.aoMapIntensity = 3
 material.displacementMap = doorHeightTexture
+material.displacementScale = 3
 
 gui.add(material, 'metalness').min(0).max(1).step(0.0001)
 gui.add(material, 'roughness').min(0).max(1).step(0.0001)
 gui.add(material, 'aoMapIntensity').min(0).max(20).step(1)
+gui.add(material, 'displacementScale').min(0).max(5).step(0.2)
 
 
 const sphere = new THREE.Mesh(

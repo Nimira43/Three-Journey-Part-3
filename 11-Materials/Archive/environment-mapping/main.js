@@ -28,11 +28,17 @@ material.roughness = 0.2
 // Example 4
 // material.displacementMap = doorHeightTexture
 
+// Example 5
+// material.displacementScale = 3
+
 gui.add(material, 'metalness').min(0).max(1).step(0.0001)
 gui.add(material, 'roughness').min(0).max(1).step(0.0001)
 
 // Example 3
 // gui.add(material, 'aoMapIntensity').min(0).max(20).step(1)
+
+// Example 6
+// gui.add(material, 'displacementScale').min(0).max(5).step(0.2)
 
 const sphere = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
