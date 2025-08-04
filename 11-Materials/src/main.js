@@ -20,7 +20,11 @@ doorColourTexture.colorSpace = THREE.SRGBColorSpace
 matcapTexture.colorSpace = THREE.SRGBColorSpace
 
 // const material = new THREE.MeshDepthMaterial()
-const material = new THREE.MeshLambertMaterial()
+// const material = new THREE.MeshLambertMaterial()
+
+const material = new THREE.MeshPhongMaterial()
+material.shininess = 100
+
 
 const sphere = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
@@ -42,9 +46,9 @@ torus.position.x = 1.5
 
 scene.add(sphere, plane, torus)
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+const ambientLight = new THREE.AmbientLight(0xffd700, 1);
 scene.add(ambientLight)
-const pointLight = new THREE.PointLight(0xffffff, 30);
+const pointLight = new THREE.PointLight(0xff4500, 30);
 pointLight.position.x = 2
 pointLight.position.y = 3
 pointLight.position.z = 4
