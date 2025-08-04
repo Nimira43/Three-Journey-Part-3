@@ -36,18 +36,24 @@ gui.add(material, 'roughness').min(0).max(1).step(0.0001)
 
 const sphere = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
+  // Example 5
+  // new THREE.SphereGeometry(0.5, 64, 64),
   material
 )
 sphere.position.x = -1.5
 
 const plane = new THREE.Mesh(
   new THREE.PlaneGeometry(1, 1),
+  // Example 5
+  // new THREE.PlaneGeometry(1, 1, 100, 100),
   material
 )
 plane.position.x = 0
 
 const torus = new THREE.Mesh(
   new THREE.TorusGeometry(0.3, 0.2, 16, 32),
+  // Example 5
+  // new THREE.TorusGeometry(0.3, 0.2, 64, 128),
   material
 )
 torus.position.x = 1.5
