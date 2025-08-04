@@ -33,9 +33,11 @@ material.metalness = 0.7
 material.roughness = 0.2
 material.map = doorColourTexture
 material.aoMap = doorAmbientOcclusionTexture
+material.aoMapIntensity = 3
 
 gui.add(material, 'metalness').min(0).max(1).step(0.0001)
 gui.add(material, 'roughness').min(0).max(1).step(0.0001)
+gui.add(material, 'aoMapIntensity').min(0).max(20).step(1)
 
 
 const sphere = new THREE.Mesh(
