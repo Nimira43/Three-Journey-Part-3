@@ -2,6 +2,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import './main.css'
 import GUI from 'lil-gui'
+import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js'
 
 const gui = new GUI()
 
@@ -29,8 +30,8 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace
 // material.specular = new THREE.Color(0xff0000)
 
 const material = new THREE.MeshStandardMaterial()
-material.metalness = 0.45
-material.roughness = 0.65
+material.metalness = 0.7
+material.roughness = 0.2
 
 gui.add(material, 'metalness').min(0).max(1).step(0.0001)
 gui.add(material, 'roughness').min(0).max(1).step(0.0001)
