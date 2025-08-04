@@ -3,6 +3,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import './main.css'
 import GUI from 'lil-gui'
 
+const gui = new GUI()
+
 const canvas = document.querySelector('.canvas')
 const scene = new THREE.Scene()
 const textureLoader = new THREE.TextureLoader()
