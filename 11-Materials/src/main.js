@@ -7,8 +7,8 @@ const gui = new GUI()
 
 const canvas = document.querySelector('.canvas')
 const scene = new THREE.Scene()
-const textureLoader = new THREE.TextureLoader()
 
+const textureLoader = new THREE.TextureLoader()
 const doorColourTexture = textureLoader.load('./textures/door/color.jpg')
 const doorAlphaTexture = textureLoader.load('./textures/door/alpha.jpg')
 const doorAmbientOcclusionTexture = textureLoader.load('./textures/door/ambientOcclusion.jpg')
@@ -24,7 +24,6 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace
 
 // const material = new THREE.MeshDepthMaterial()
 // const material = new THREE.MeshLambertMaterial()
-
 // const material = new THREE.MeshPhongMaterial()
 // material.shininess = 100
 // material.specular = new THREE.Color(0xff0000)
@@ -32,6 +31,10 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace
 const material = new THREE.MeshStandardMaterial()
 material.metalness = 0.45
 material.roughness = 0.65
+
+gui.add(material, 'metalness').min(0).max(1).step(0.0001)
+gui.add(material, 'roughness').min(0).max(1).step(0.0001)
+
 
 const sphere = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
@@ -50,7 +53,6 @@ const torus = new THREE.Mesh(
   material
 )
 torus.position.x = 1.5
-
 scene.add(sphere, plane, torus)
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 1);
