@@ -42,6 +42,11 @@ torus.position.x = 1.5
 
 scene.add(sphere, plane, torus)
 
+const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+
+
+
+
 const sizes = {
   width: window.innerWidth,
   height: window.innerHeight
