@@ -11,12 +11,18 @@ const scene = new THREE.Scene()
 // Example 2
 // const doorColourTexture = textureLoader.load('./textures/door/color.jpg')
 
+// Example 3
+// const doorAmbientOcclusionTexture = textureLoader.load('./textures/door/ambientOcclusion.jpg')
+
 const material = new THREE.MeshStandardMaterial()
 material.metalness = 0.7
 material.roughness = 0.2
 
 // Example 2
 // material.map = doorColourTexture
+
+// Example 3
+// material.aoMap = doorAmbientOcclusionTexture
 
 gui.add(material, 'metalness').min(0).max(1).step(0.0001)
 gui.add(material, 'roughness').min(0).max(1).step(0.0001)
