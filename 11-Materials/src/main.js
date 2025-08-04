@@ -42,7 +42,8 @@ gui.add(material, 'aoMapIntensity').min(0).max(20).step(1)
 
 
 const sphere = new THREE.Mesh(
-  new THREE.SphereGeometry(0.5, 16, 16),
+  // new THREE.SphereGeometry(0.5, 16, 16),
+  new THREE.SphereGeometry(0.5, 128, 128),
   material
 )
 sphere.position.x = -1.5
