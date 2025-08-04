@@ -16,16 +16,15 @@ const doorRoughnessTexture = textureLoader.load('./textures/door/roughness.jpg')
 const matcapTexture = textureLoader.load('./textures/matcaps/3.png')
 const gradientTexture = textureLoader.load('./textures/gradients/3.jpg')
 
-doorColourTexture.colorSpace = THREE.SRGBColorSpace
-matcapTexture.colorSpace = THREE.SRGBColorSpace
-
 // const material = new THREE.MeshDepthMaterial()
 // const material = new THREE.MeshLambertMaterial()
 
-const material = new THREE.MeshPhongMaterial()
-material.shininess = 100
-material.specular = new THREE.Color(0xff0000)
+// const material = new THREE.MeshPhongMaterial()
+// material.shininess = 100
+// material.specular = new THREE.Color(0xff0000)
 
+const material = new THREE.MeshToonMaterial()
+material.gradientMap = gradientTexture
 
 const sphere = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
