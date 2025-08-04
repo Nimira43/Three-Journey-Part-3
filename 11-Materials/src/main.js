@@ -64,6 +64,10 @@ pointLight.position.z = 4
 scene.add(pointLight)
 
 const rgbeLoader = new RGBELoader()
+rgbeLoader.load('./textures/environmentMap/2k.hdr', (environmentMap) => {
+  environmentMap.mapping = THREE.EquirectangularReflectionMapping
+  scene.background = environmentMap
+})
 
 const sizes = {
   width: window.innerWidth,
