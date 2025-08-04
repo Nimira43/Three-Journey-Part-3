@@ -46,9 +46,9 @@ torus.position.x = 1.5
 
 scene.add(sphere, plane, torus)
 
-const ambientLight = new THREE.AmbientLight(0xffd700, 1);
+const ambientLight = new THREE.AmbientLight(0x00bfff, 1);
 scene.add(ambientLight)
-const pointLight = new THREE.PointLight(0xff4500, 30);
+const pointLight = new THREE.PointLight(0x8a2be2, 30);
 pointLight.position.x = 2
 pointLight.position.y = 3
 pointLight.position.z = 4
