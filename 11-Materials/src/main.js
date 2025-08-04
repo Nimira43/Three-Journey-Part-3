@@ -27,7 +27,8 @@ matcapTexture.colorSpace = THREE.SRGBColorSpace
 // material.specular = new THREE.Color(0xff0000)
 
 const material = new THREE.MeshStandardMaterial()
-
+material.metalness = 1.14
+material.roughness = 0.45
 
 const sphere = new THREE.Mesh(
   new THREE.SphereGeometry(0.5, 16, 16),
