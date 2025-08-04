@@ -34,6 +34,7 @@ material.roughness = 0.2
 material.map = doorColourTexture
 material.aoMap = doorAmbientOcclusionTexture
 material.aoMapIntensity = 3
+material.displacementMap = doorHeightTexture
 
 gui.add(material, 'metalness').min(0).max(1).step(0.0001)
 gui.add(material, 'roughness').min(0).max(1).step(0.0001)
